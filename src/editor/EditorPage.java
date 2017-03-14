@@ -9,6 +9,7 @@ public class EditorPage
 {
   BorderPane bPane;
   TextArea writeArea;
+  String filePath = null; //will have a value when saved
   
   EditorPage()
   {
@@ -35,11 +36,11 @@ public class EditorPage
     }
     catch (FileNotFoundException fnfe)
     {
-      System.out.println("File not found!");
+      System.out.println("FileNotFoundException: when opening file.");
     }
     catch (IOException iOE)
     {
-      System.out.println("IOException");
+      System.out.println("IOException: when opening file.");
     }
   }
   
